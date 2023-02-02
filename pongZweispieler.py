@@ -123,8 +123,8 @@ class Pong(View):
 
 
         # ball speed
-        self.ball.change_x = random.choice([-2, -3, -4, -5, -6, -7, 2, 3, 4, 5, 6, 7])
-        self.ball.change_y = random.choice([SPEED, -SPEED])
+        self.ball.change_x = random.choice([-2, -3, -4, -5, 2, 3, 4, 5])
+        self.ball.change_y = random.choice([-SPEED, SPEED])
 
         # setup player and bot paddles
         self.left_player.setup()
@@ -162,10 +162,11 @@ class Pong(View):
                 self.ball.bottom = self.left_player.paddle.top
                 self.ball.bottom = self.right_player.paddle.top
                 pongZweispieler.SPEED += .5
-                self.ball.change_x = pongZweispieler.SPEED
-                print(pongZweispieler.SPEED)
+                self.ball.change_y = -pongZweispieler.SPEED
+                self.ball.change_x = random.choice([-2, -3, -4, -5, 2, 3, 4, 5])
+                print("Speed:",pongZweispieler.SPEED)
+                print("Richtung:", self.ball.change_x)
                 self.counter += 1
-                print(self.counter)
             else:
                 self.ball.top = self.bot.paddle.bottom
 
