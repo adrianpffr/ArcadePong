@@ -1,5 +1,6 @@
 import random
 
+import arcade
 from arcade import Window, Section, View, SpriteList, SpriteSolidColor, SpriteCircle, draw_text, draw_line
 from arcade.color import BLACK, BLUE, RED, BEAU_BLUE, GRAY, WHITE
 from arcade.key import A, D, LEFT, RIGHT
@@ -96,6 +97,8 @@ class Pong(View):
 
         self.paddles: SpriteList = SpriteList()
 
+        self.background = arcade.load_texture("PongHintergrund.png")
+
         self.left_player: Player1 = Player1(
             0, 0, PLAYER_SECTION_WIDTH, self.window.height, key_up=D,
             key_down=A, name='Left')
@@ -161,11 +164,12 @@ class Pong(View):
             if collided_paddle[0] is self.left_player.paddle or collided_paddle[0] is self.right_player.paddle:
                 self.ball.bottom = self.left_player.paddle.top
                 self.ball.bottom = self.right_player.paddle.top
-                pongZweispieler.SPEED += .5
-                self.ball.change_y = -pongZweispieler.SPEED
-                self.ball.change_x = random.choice([-2, -3, -4, -5, 2, 3, 4, 5])
-                print("Speed:",pongZweispieler.SPEED)
-                print("Richtung:", self.ball.change_x)
+                if pongZweispieler.SPEED < 32:
+                    pongZweispieler.SPEED += 2
+                    self.ball.change_y = -pongZweispieler.SPEED
+                    self.ball.change_x = random.choice([-2, -3, -4, -5, 2, 3, 4, 5])
+                    print("Speed:",pongZweispieler.SPEED)
+                    print("Richtung:", self.ball.change_x)
                 self.counter += 1
             else:
                 self.ball.top = self.bot.paddle.bottom
@@ -202,7 +206,8 @@ class Pong(View):
         self.window.close()
 
     def on_draw(self):
-        self.clear(BEAU_BLUE)
+        self.clear()
+        arcade.draw_lrwh_rectangle_textured(0, 0, 1440, 900, self.background)
 
         draw_text(f'Score: {self.counter}', self.window.width - 470 ,
                   self.window.height / 2, BLUE, font_size=30)
@@ -213,7 +218,7 @@ class Pong(View):
         self.ball.draw()
 
 def main():
-    window = Window(title='Arcane Arcade', fullscreen=False)
+    window = Window(title='Arcane Arcade', fullscreen=True)
     game = Pong()
     game.setup()
     window.show_view(game)
