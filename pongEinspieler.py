@@ -25,7 +25,6 @@ class Bot(Section):
 
         self.paddle: SpriteSolidColor = SpriteSolidColor(10, 100, BLACK)
 
-
     def setup(self):
         self.paddle.position = self.left + 20, self.height / 2
 
