@@ -6,6 +6,7 @@ from arcade import Window, Section, View, SpriteList, SpriteSolidColor, \
 from arcade.color import BLACK, BLUE, RED, BEAU_BLUE, GRAY, WHITE
 from arcade.key import W, S, UP, DOWN
 
+
 import pongEinspieler
 
 PLAYER_SECTION_WIDTH = 100
