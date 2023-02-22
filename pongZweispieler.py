@@ -18,7 +18,7 @@ class Bot(Section):
         super().__init__(left, bottom, width, height,
                          **kwargs)
 
-        self.paddle: SpriteSolidColor = SpriteSolidColor(100, 10, GRAY)
+        self.paddle: SpriteSolidColor = SpriteSolidColor(100, 10, WHITE)
 
     def setup(self):
         self.paddle.position = self.left + 400, self.top - 10
@@ -39,7 +39,7 @@ class Player1(Section):
         self.key_up: int = key_up
         self.key_down: int = key_down
 
-        self.paddle: SpriteSolidColor = SpriteSolidColor(100, 10, BLACK)
+        self.paddle: SpriteSolidColor = SpriteSolidColor(100, 10, WHITE)
 
     def setup(self):
         self.paddle.position = self.left + 100, self.bottom + 10
@@ -203,6 +203,10 @@ class Pong(View):
 
     def end_game(self):
         print("Du hast:", self.counter, "erreicht.")
+        f = open("scorePong2" , "a")
+        f.write(str(self.counter) + "\n")
+        f.close()
+
         self.window.close()
 
     def on_draw(self):
@@ -210,7 +214,7 @@ class Pong(View):
         arcade.draw_lrwh_rectangle_textured(0, 0, 1440, 900, self.background)
 
         draw_text(f'Score: {self.counter}', self.window.width - 470 ,
-                  self.window.height / 2, BLUE, font_size=30)
+                  self.window.height / 2, WHITE, font_size=30)
 
         self.half_window_x = self.window.width / 2
         draw_line(self.half_window_x, 0, self.half_window_x, self.window.height, GRAY, 2)
