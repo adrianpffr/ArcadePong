@@ -31,7 +31,7 @@ class Pong(View):
         self.ball: SpriteCircle = SpriteCircle(10, RED)
 
     def setup(self):
-        self.ball.position = self.window.width / 2, self.window.height / 2
+        self.ball.position = self.window.height / 2, self.window.height / 2
         self.bot.position = 0 + 20, self.window.height / 2
         self.right_player.position = self.window.width - 20, self.window.height / 2
 
