@@ -40,8 +40,8 @@ class Pong(View):
         self.ball.change_y = random.choice([-SPEED, SPEED])
 
         # setup player and bot paddles
-        self.right_player.position = self.window.width / 2 + 100, self.window.height - 850
-        self.left_player.position = self.window.width / 2 - 100, self.window.height - 850
+        self.right_player.position = self.window.width / 2 + 100, self.window.height - 880
+        self.left_player.position = self.window.width / 2 - 100, self.window.height - 880
         self.bot.position = self.window.width / 2, self.window.height - 10
 
         self.counter = 0
@@ -113,6 +113,20 @@ class Pong(View):
             self.end_game()
         elif self.ball.top >= self.window.height:
             self.end_game()
+
+    def on_key_press(self, symbol: int, modifiers: int):
+        if symbol == arcade.key.RIGHT:
+            self.right_player.change_x = PLAYER_PADDLE_SPEED
+        if symbol == arcade.key.LEFT:
+            self.right_player.change_x = -PLAYER_PADDLE_SPEED
+        if symbol == arcade.key.D:
+            self.left_player.change_x = PLAYER_PADDLE_SPEED
+        if symbol == arcade.key.A:
+            self.left_player.change_x = -PLAYER_PADDLE_SPEED
+
+    def on_key_release(self, _symbol: int, _modifiers: int):
+        self.right_player.stop()
+        self.left_player.stop()
 
     def end_game(self):
         print("Du hast:", self.counter, "erreicht.")

@@ -8,6 +8,9 @@ class Keyboard(arcade.View):
     def __init__(self):
         super().__init__()
 
+        width_button = 70
+        height_button = 50
+
         self.manager = arcade.gui.UIManager()
         self.manager.enable()
 
