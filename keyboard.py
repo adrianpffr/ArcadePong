@@ -11,7 +11,7 @@ class Keyboard(arcade.View):
 
         self.window.set_update_rate(0.02)
         self.maus = arcade.SpriteCircle(color=PURPLE_PIZZAZZ, radius=10)
-        '''joysticks = arcade.get_joysticks()
+        joysticks = arcade.get_joysticks()
 
         if joysticks:
             # Grab the first one in  the list
@@ -22,9 +22,9 @@ class Keyboard(arcade.View):
             # Push this object as a handler for joystick events.
             # Required for the on_joy* events to be called.
             self.joystick.push_handlers(self)
-            self.joystick2.push_handlers(self)'''
+            self.joystick2.push_handlers(self)
 
-        #main.lastView = "GameOver"
+        main.lastView = "GameOver"
         width_button = 70
         height_button = 50
         self.press = False
@@ -37,113 +37,113 @@ class Keyboard(arcade.View):
         # First Line
         self.firstLineList = arcade.SpriteList()
 
-        self.q_button = Sprite("q_button.png", image_width=width_button, image_height=height_button)
+        self.q_button = Sprite("keyboard_keys/q_button.png", image_width=width_button, image_height=height_button)
         self.firstLineList.append(self.q_button)
         self.q_button.set_position(70, 400)
 
-        self.w_button = SpriteSolidColor(width=width_button, height=height_button, color=WHITE)
+        self.w_button = Sprite("keyboard_keys/w_button.png",image_width=width_button, image_height=height_button)
         self.firstLineList.append(self.w_button)
         self.w_button.set_position(150, 400)
 
-        self.e_button = SpriteSolidColor(width=width_button, height=height_button, color=WHITE)
+        self.e_button = Sprite("keyboard_keys/e_button.png", image_width=width_button, image_height=height_button)
         self.firstLineList.append(self.e_button)
         self.e_button.set_position(230, 400)
 
-        self.r_button = SpriteSolidColor(width=width_button, height=height_button, color=WHITE)
+        self.r_button = Sprite("keyboard_keys/r_button.png", image_width=width_button, image_height=height_button)
         self.firstLineList.append(self.r_button)
         self.r_button.set_position(310, 400)
 
-        self.t_button = SpriteSolidColor(width=width_button, height=height_button, color=WHITE)
+        self.t_button = Sprite("keyboard_keys/t_button.png", image_width=width_button, image_height=height_button)
         self.firstLineList.append(self.t_button)
         self.t_button.set_position(390, 400)
 
-        self.z_button = SpriteSolidColor(width=width_button, height=height_button, color=WHITE)
+        self.z_button = Sprite("keyboard_keys/z_button.png", image_width=width_button, image_height=height_button)
         self.firstLineList.append(self.z_button)
         self.z_button.set_position(470, 400)
 
-        self.u_button = SpriteSolidColor(width=width_button, height=height_button, color=WHITE)
+        self.u_button = Sprite("keyboard_keys/u_button.png", image_width=width_button, image_height=height_button)
         self.firstLineList.append(self.u_button)
         self.u_button.set_position(550, 400)
 
-        self.i_button = SpriteSolidColor(width=width_button, height=height_button, color=WHITE)
+        self.i_button = Sprite("keyboard_keys/i_button.png", image_width=width_button, image_height=height_button)
         self.firstLineList.append(self.i_button)
         self.i_button.set_position(630, 400)
 
-        self.o_button = SpriteSolidColor(width=width_button, height=height_button, color=WHITE)
+        self.o_button = Sprite("keyboard_keys/o_button.png", image_width=width_button, image_height=height_button)
         self.firstLineList.append(self.o_button)
         self.o_button.set_position(710, 400)
 
-        self.p_button = SpriteSolidColor(width=width_button, height=height_button, color=WHITE)
+        self.p_button = Sprite("keyboard_keys/p_button.png", image_width=width_button, image_height=height_button)
         self.firstLineList.append(self.p_button)
         self.p_button.set_position(790, 400)
 
         # Second Line
         self.secondLineList = arcade.SpriteList()
 
-        self.a_button = SpriteSolidColor(width=width_button, height=height_button, color=WHITE)
+        self.a_button = Sprite("keyboard_keys/a_button.png", image_width=width_button, image_height=height_button)
         self.secondLineList.append(self.a_button)
         self.a_button.set_position(90, 340)
 
-        self.s_button = SpriteSolidColor(width=width_button, height=height_button, color=WHITE)
+        self.s_button = Sprite("keyboard_keys/s_button.png", image_width=width_button, image_height=height_button)
         self.secondLineList.append(self.s_button)
         self.s_button.set_position(170, 340)
 
-        self.d_button = SpriteSolidColor(width=width_button, height=height_button, color=WHITE)
+        self.d_button = Sprite("keyboard_keys/d_button.png", image_width=width_button, image_height=height_button)
         self.secondLineList.append(self.d_button)
         self.d_button.set_position(250, 340)
 
-        self.f_button = SpriteSolidColor(width=width_button, height=height_button, color=WHITE)
+        self.f_button = Sprite("keyboard_keys/f_button.png", image_width=width_button, image_height=height_button)
         self.secondLineList.append(self.f_button)
         self.f_button.set_position(330, 340)
 
-        self.g_button = SpriteSolidColor(width=width_button, height=height_button, color=WHITE)
+        self.g_button = Sprite("keyboard_keys/g_button.png", image_width=width_button, image_height=height_button)
         self.secondLineList.append(self.g_button)
         self.g_button.set_position(410, 340)
 
-        self.h_button = SpriteSolidColor(width=width_button, height=height_button, color=WHITE)
+        self.h_button = Sprite("keyboard_keys/h_button.png", image_width=width_button, image_height=height_button)
         self.secondLineList.append(self.h_button)
         self.h_button.set_position(490, 340)
 
-        self.j_button = SpriteSolidColor(width=width_button, height=height_button, color=WHITE)
+        self.j_button = Sprite("keyboard_keys/j_button.png", image_width=width_button, image_height=height_button)
         self.secondLineList.append(self.j_button)
         self.j_button.set_position(570, 340)
 
-        self.k_button = SpriteSolidColor(width=width_button, height=height_button, color=WHITE)
+        self.k_button = Sprite("keyboard_keys/k_button.png", image_width=width_button, image_height=height_button)
         self.secondLineList.append(self.k_button)
         self.k_button.set_position(670, 340)
 
-        self.l_button = SpriteSolidColor(width=width_button, height=height_button, color=WHITE)
+        self.l_button = Sprite("keyboard_keys/l_button.png", image_width=width_button, image_height=height_button)
         self.secondLineList.append(self.l_button)
         self.l_button.set_position(750, 340)
 
         # Third Line
         self.thirdLineList = arcade.SpriteList()
 
-        self.y_button = SpriteSolidColor(width=width_button, height=height_button, color=WHITE)
+        self.y_button = Sprite("keyboard_keys/y_button.png", image_width=width_button, image_height=height_button)
         self.thirdLineList.append(self.y_button)
         self.y_button.set_position(230, 280)
 
-        self.x_button = SpriteSolidColor(width=width_button, height=height_button, color=WHITE)
+        self.x_button = Sprite("keyboard_keys/x_button.png", image_width=width_button, image_height=height_button)
         self.thirdLineList.append(self.x_button)
         self.x_button.set_position(310, 280)
 
-        self.c_button = SpriteSolidColor(width=width_button, height=height_button, color=WHITE)
+        self.c_button = Sprite("keyboard_keys/c_button.png", image_width=width_button, image_height=height_button)
         self.thirdLineList.append(self.c_button)
         self.c_button.set_position(390, 280)
 
-        self.v_button = SpriteSolidColor(width=width_button, height=height_button, color=WHITE)
+        self.v_button = Sprite("keyboard_keys/v_button.png", image_width=width_button, image_height=height_button)
         self.thirdLineList.append(self.v_button)
         self.v_button.set_position(470, 280)
 
-        self.b_button = SpriteSolidColor(width=width_button, height=height_button, color=WHITE)
+        self.b_button = Sprite("keyboard_keys/b_button.png", image_width=width_button, image_height=height_button)
         self.thirdLineList.append(self.b_button)
         self.b_button.set_position(550, 280)
 
-        self.n_button = SpriteSolidColor(width=width_button, height=height_button, color=WHITE)
+        self.n_button = Sprite("keyboard_keys/n_button.png", image_width=width_button, image_height=height_button)
         self.thirdLineList.append(self.n_button)
         self.n_button.set_position(630, 280)
 
-        self.m_button = SpriteSolidColor(width=width_button, height=height_button, color=WHITE)
+        self.m_button = Sprite("keyboard_keys/m_button.png", image_width=width_button, image_height=height_button)
         self.thirdLineList.append(self.m_button)
         self.m_button.set_position(710, 280)
 
@@ -151,14 +151,14 @@ class Keyboard(arcade.View):
         self.keyboardLayout = arcade.gui.UIBoxLayout()
         self.keyboardLayout.add(self.ui_text_label)
 
-        haupt_button = arcade.gui.UIFlatButton(text="Mainmenue", width=200)
-        self.keyboardLayout.add(haupt_button.with_space_around(bottom=20))
+        self.main_button = Sprite("keyboard_keys/main_button.png", image_width=200, image_height=50)
+        self.main_button.set_position(800, 600)
 
-        replay_button = arcade.gui.UIFlatButton(text="New Game", width=200)
-        self.keyboardLayout.add(replay_button.with_space_around(bottom=20))
+        self.replay_button = Sprite("keyboard_keys/newgame_button.png", image_width=200, image_height=50)
+        self.replay_button.set_position(800, 550)
 
-        save_button = arcade.gui.UIFlatButton(text="SAVE", width=200)
-        self.keyboardLayout.add(save_button.with_space_around(bottom=20))
+        self.save_button = Sprite("keyboard_keys/save_button.png", image_width=200, image_height=50)
+        self.save_button.set_position(800, 500)
 
         # Create a widget to hold the v_box widget, that will center the buttons
         self.manager.add(
@@ -173,7 +173,7 @@ class Keyboard(arcade.View):
             self.press = True
 
     def on_update(self, delta_time: float):
-        '''self.center_x = 0
+        self.center_x = 0
         self.center_y = 0
 
         if self.joystick:
@@ -197,7 +197,7 @@ class Keyboard(arcade.View):
         if self.center_y == -1.0:
             self.on_key_press(self, 1)
         if self.center_y != 1.0 and self.center_y != -1.0 and self.center_x != 1.0 and self.center_x != -1.0:
-            self.on_key_release(self, 1)'''
+            self.on_key_release(self, 1)
         self.on_keyboard_key()
         self.maus.update()
 
@@ -337,6 +337,16 @@ class Keyboard(arcade.View):
                 self.pressed_key = "M"
                 self.update_text()
 
+        if self.maus.collides_with_sprite(self.save_button) and self.press == True:
+            self.save_button_pressed()
+
+        if self.maus.collides_with_sprite(self.replay_button) and self.press == True:
+            self.replay_button_pressed()
+
+        if self.maus.collides_with_sprite(self.main_button) and self.press == True:
+            self.main_button_pressed()
+
+
     def on_key_press(self, symbol: int, modifiers: int):
 
         if self.center_y == -1.0:
@@ -361,7 +371,7 @@ class Keyboard(arcade.View):
         arcade.set_background_color(arcade.color.RED)
         self.background = arcade.load_texture("Pictures/GameOverView.jpg")
 
-    '''def replay_button(self, event):
+    def replay_button_pressed(self, event):
         if main.lastGame == 2:
             game = SnakeViewZweispieler()
         if main.lastGame == 3:
@@ -370,7 +380,7 @@ class Keyboard(arcade.View):
         if main.lastGame == 1:
             game = SnakeViewEinspieler()
 
-        self.window.show_view(game)'''
+        self.window.show_view(game)
 
     def on_draw(self):
         self.clear()
@@ -379,14 +389,16 @@ class Keyboard(arcade.View):
         self.firstLineList.draw()
         self.secondLineList.draw()
         self.thirdLineList.draw()
+        self.main_button.draw()
+        self.save_button.draw()
+        self.replay_button.draw()
         self.maus.draw()
 
-    def hauptmenue_button(self, event):
-        #game = MenuView()
-        #self.window.show_view(game)
-        pass
+    def main_button_pressed(self, event):
+        game = MenuView()
+        self.window.show_view(game)
 
-    '''def save_button(self, event):
+    def save_button_pressed(self, event):
         print("HALLO")
         if main.lastGame == 1:
             f = open("Scores/ScoreSnakeEinspieler.txt", "a")
@@ -398,7 +410,7 @@ class Keyboard(arcade.View):
             f = open("Scores/ScorePongZweispieler.txt", "a")
 
         f.write(str(self.ui_text_label.text) + " " + str(main.SCORE) + "\n")
-        f.close()'''
+        f.close()
 
 def main():
         window = Window(title='Arcane Arcade', fullscreen=True)

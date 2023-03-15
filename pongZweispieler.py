@@ -23,8 +23,6 @@ class Pong(View):
 
         self.background = arcade.load_texture("PongHintergrund.png")
 
-
-
         self.paddles.append(self.left_player)
         self.paddles.append(self.right_player)
         self.paddles.append(self.bot)
@@ -33,8 +31,6 @@ class Pong(View):
 
     def setup(self):
         self.ball.position = self.window.width / 2, self.window.height / 2
-
-
         # ball speed
         self.ball.change_x = random.choice([-2, -3, -4, -5, 2, 3, 4, 5])
         self.ball.change_y = random.choice([-SPEED, SPEED])
@@ -45,7 +41,6 @@ class Pong(View):
         self.bot.position = self.window.width / 2, self.window.height - 10
 
         self.counter = 0
-
 
     def on_update(self, delta_time: float):
         self.ball.update()
@@ -82,7 +77,7 @@ class Pong(View):
                     self.ball.change_y = -pongZweispieler.SPEED
                     self.ball.change_x = random.choice([-2, -3, -4, -5, 2, 3, 4, 5])
                     print("Speed:",pongZweispieler.SPEED)
-                    print("Richtung:", self.ball.change_x)
+                    x = print("Richtung:", self.ball.change_x)
                 self.counter += 1
             else:
                 self.ball.top = self.bot.bottom
@@ -91,7 +86,6 @@ class Pong(View):
             self.ball.change_y *= -1
 
         # limit movement right_player
-
         if self.right_player.right > self.window.width:
             self.right_player.right = self.window.width
 
@@ -99,7 +93,6 @@ class Pong(View):
             self.right_player.left = self.window.width / 2
 
         # limit movement left_player
-
         if self.left_player.left < 0:
             self.left_player.left = 0
 
