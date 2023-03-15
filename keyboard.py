@@ -206,163 +206,136 @@ class Keyboard(arcade.View):
             if len(self.ui_text_label.text) < max_length_input:
                 self.pressed_key = "Q"
                 self.update_text()
-            self.press = False
 
         if self.maus.collides_with_sprite(self.w_button) and self.press == True:
             if len(self.ui_text_label.text) < max_length_input:
                 self.pressed_key = "W"
                 self.update_text()
-            self.press = False
 
         if self.maus.collides_with_sprite(self.e_button) and self.press == True:
             if len(self.ui_text_label.text) < max_length_input:
                 self.pressed_key = "E"
                 self.update_text()
-            self.press = False
 
         if self.maus.collides_with_sprite(self.r_button) and self.press == True:
             if len(self.ui_text_label.text) < max_length_input:
                 self.pressed_key = "R"
                 self.update_text()
-            self.press = False
 
         if self.maus.collides_with_sprite(self.r_button) and self.press == True:
             if len(self.ui_text_label.text) < max_length_input:
                 self.pressed_key = "R"
                 self.update_text()
-            self.press = False
 
         if self.maus.collides_with_sprite(self.t_button) and self.press == True:
             if len(self.ui_text_label.text) < max_length_input:
                 self.pressed_key = "T"
                 self.update_text()
-            self.press = False
 
         if self.maus.collides_with_sprite(self.z_button) and self.press == True:
             if len(self.ui_text_label.text) < max_length_input:
                 self.pressed_key = "Z"
                 self.update_text()
-            self.press = False
 
         if self.maus.collides_with_sprite(self.u_button) and self.press == True:
             if len(self.ui_text_label.text) < max_length_input:
                 self.pressed_key = "U"
                 self.update_text()
-            self.press = False
 
         if self.maus.collides_with_sprite(self.i_button) and self.press == True:
             if len(self.ui_text_label.text) < max_length_input:
                 self.pressed_key = "I"
                 self.update_text()
-            self.press = False
 
         if self.maus.collides_with_sprite(self.o_button) and self.press == True:
             if len(self.ui_text_label.text) < max_length_input:
                 self.pressed_key = "O"
                 self.update_text()
-            self.press = False
 
         if self.maus.collides_with_sprite(self.p_button) and self.press == True:
             if len(self.ui_text_label.text) < max_length_input:
                 self.pressed_key = "P"
                 self.update_text()
-            self.press = False
 
         if self.maus.collides_with_sprite(self.a_button) and self.press == True:
             if len(self.ui_text_label.text) < max_length_input:
                 self.pressed_key = "A"
                 self.update_text()
-            self.press = False
 
         if self.maus.collides_with_sprite(self.s_button) and self.press == True:
             if len(self.ui_text_label.text) < max_length_input:
                 self.pressed_key = "S"
                 self.update_text()
-            self.press = False
 
         if self.maus.collides_with_sprite(self.d_button) and self.press == True:
             if len(self.ui_text_label.text) < max_length_input:
                 self.pressed_key = "D"
                 self.update_text()
-            self.press = False
 
         if self.maus.collides_with_sprite(self.f_button) and self.press == True:
             if len(self.ui_text_label.text) < max_length_input:
                 self.pressed_key = "F"
                 self.update_text()
-            self.press = False
 
         if self.maus.collides_with_sprite(self.g_button) and self.press == True:
             if len(self.ui_text_label.text) < max_length_input:
                 self.pressed_key = "G"
                 self.update_text()
-            self.press = False
 
         if self.maus.collides_with_sprite(self.h_button) and self.press == True:
             if len(self.ui_text_label.text) < max_length_input:
                 self.pressed_key = "H"
                 self.update_text()
-            self.press = False
 
         if self.maus.collides_with_sprite(self.j_button) and self.press == True:
             if len(self.ui_text_label.text) < max_length_input:
                 self.pressed_key = "J"
                 self.update_text()
-            self.press = False
 
         if self.maus.collides_with_sprite(self.k_button) and self.press == True:
             if len(self.ui_text_label.text) < max_length_input:
                 self.pressed_key = "K"
                 self.update_text()
-            self.press = False
 
         if self.maus.collides_with_sprite(self.l_button) and self.press == True:
             if len(self.ui_text_label.text) < max_length_input:
                 self.pressed_key = "L"
                 self.update_text()
-            self.press = False
 
         if self.maus.collides_with_sprite(self.y_button) and self.press == True:
             if len(self.ui_text_label.text) < max_length_input:
                 self.pressed_key = "Y"
                 self.update_text()
-            self.press = False
 
         if self.maus.collides_with_sprite(self.x_button) and self.press == True:
             if len(self.ui_text_label.text) < max_length_input:
                 self.pressed_key = "X"
                 self.update_text()
-            self.press = False
 
         if self.maus.collides_with_sprite(self.c_button) and self.press == True:
             if len(self.ui_text_label.text) < max_length_input:
                 self.pressed_key = "C"
                 self.update_text()
-            self.press = False
 
         if self.maus.collides_with_sprite(self.v_button) and self.press == True:
             if len(self.ui_text_label.text) < max_length_input:
                 self.pressed_key = "V"
                 self.update_text()
-            self.press = False
 
         if self.maus.collides_with_sprite(self.b_button) and self.press == True:
             if len(self.ui_text_label.text) < max_length_input:
                 self.pressed_key = "B"
                 self.update_text()
-            self.press = False
 
         if self.maus.collides_with_sprite(self.n_button) and self.press == True:
             if len(self.ui_text_label.text) < max_length_input:
                 self.pressed_key = "N"
                 self.update_text()
-            self.press = False
 
         if self.maus.collides_with_sprite(self.m_button) and self.press == True:
             if len(self.ui_text_label.text) < max_length_input:
                 self.pressed_key = "M"
                 self.update_text()
-            self.press = False
 
     def on_key_press(self, symbol: int, modifiers: int):
 
@@ -382,6 +355,7 @@ class Keyboard(arcade.View):
         label_text = self.ui_text_label.text
         self.ui_text_label.text = label_text + self.pressed_key
         print("Name: ", self.ui_text_label.text)
+        self.press = False
 
     def on_show_view(self):
         arcade.set_background_color(arcade.color.RED)
